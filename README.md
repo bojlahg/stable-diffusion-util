@@ -1,7 +1,7 @@
 # stable-diffusion-util
 Stable Diffusion scripts for batch running on Windows
 
-Modified and new scripts writes output files to \output\txt2img\%Promt%\%timestamp%.png
+Modified and new scripts writes output files to \output\txt2img\\%Promt%\\%timestamp%.png
 
 ldm_resample.cmd - example of using resample function with bsr model
 ldm_resample.cmd - example of batch resampling entire directory
