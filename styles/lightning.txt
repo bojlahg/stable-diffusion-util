@@ -1,0 +1,83 @@
+Spotlight
+Frontlight
+Halfrear Lighting
+Backlight
+Rim Lights
+Rim Lighting
+Floodlight
+Marquee
+Strobe
+Strobe Light
+Stroboscope
+Bright
+Ultrabright
+Crepuscular Rays
+Rays of Shimmering Light
+Artificial Lighting
+Natural Lighting
+Sunlight
+Incandescent
+Fluorescent
+Fluorescent Lamp
+Glow Stick
+Plasma Globe
+Tesla Coil
+Electric Arc
+Crackle Tube
+Edison Bulb
+Vacuum Tube Lamp
+Nixie Tube
+Halogen
+Halogen Lamp
+Neon Lamp
+Xenon Lamp
+Krypton Lamp
+Argon Lamp
+Helium Lamp
+Carbide Lamp
+Argand Lamp
+Diya Lamp
+Lantern
+Schwarz Lantern
+Nightlight
+Christmas Lights
+Optical Fiber
+Electroluminescent Wire
+Laser
+Flare
+Electromagnetic Spectrum
+Infrared
+Ultraviolet
+UV
+X-Ray
+CRT
+LCD
+LED
+OLED
+AMOLED
+7 Segment Display
+Dot Matrix Display
+Electroluminescent Display
+Vacuum Fluorescent Display
+Phosphor Display
+Plasma Display
+Quantum Dot
+Quantum Dot Display
+PenTile
+Moody Lighting
+Cinematic Lighting
+Studio Lighting
+Soft Lighting
+Hard Lighting
+Volumetric Light
+Volumetric Lighting
+Volumetric
+Contre-Jour
+Rembrandt Lighting
+Split Lighting
+Beautiful Lighting
+Accent Lighting
+Global Illumination
+Lumen Global Illumination
+Screen Space Global Illumination
+Ray Tracing Global Illumination

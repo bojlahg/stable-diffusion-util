@@ -1,0 +1,40 @@
+Warm Color Palette
+Cool Color Palette
+Colorful
+Rainbow
+Spectral Color
+Inverted Colors
+Chroma
+Dichromatism
+Tetrachromacy
+Saturated
+Neon
+Electric Colors
+Tonal Colors
+Complimentary-Colors
+Split-Complementary-Colors
+Supplementary-Colors
+Analogous-Colors
+Triadic-Colors
+Tetradic-Colors
+Polychromatic-Colors
+Light
+Dark
+Light Mode
+Dark Mode
+Tones of Black
+Tones of Black in Background
+Light Blue Background
+Light Blue Foreground
+Light Blue
+Monochrome
+Black and White
+Desaturated
+Sepia
+High Contrast
+Low Contrast
+Technicolor
+Kinemacolor
+Kodachrome
+Cinecolor
+Agfacolor

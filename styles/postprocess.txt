@@ -1,0 +1,68 @@
+Ray Tracing Reflections
+Lumen Reflections
+Screen Space Reflections
+Diffraction Grading
+Chromatic Aberration
+RGB Displacement
+Anaglyph
+Multiscopy
+Autostereoscopy
+Stereoscopy
+Parallax
+Scan Lines
+Posterization
+Quantization
+Sobel Operator
+Edge Detection
+Interlaced
+Moire Patterns
+Rounded
+Wavy
+Ripple
+Whirl
+Squiggly
+Morph
+Spiraling
+Twisted Rays
+Starburst
+Emboss
+Tessellated
+Blobby
+Blobs
+Cracks
+Textured
+Convolution Matrix
+Dilate
+Erode
+Dirty
+With Imperfections
+Distortion
+Lenticular
+Cropped
+Quantum-Wavetracing
+Tornadic
+Sabattier Effect
+Smudged
+Sharpened
+Glowing Edges
+Spherize
+Harris Shutter
+Mordancage
+Ray Traced
+Ray Tracing Ambient Occlusion
+Anti-Aliasing
+FXAA
+TXAA
+RTX
+SSAO
+De-Noise
+Shaders
+OpenGL-Shaders
+GLSL-Shaders
+Post Processing
+Post-Production
+Cel Shading
+Tone Mapping
+CGI
+VFX
+SFX

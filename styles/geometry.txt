@@ -1,0 +1,110 @@
+Point
+Dot
+Line
+Curve
+Bezier Curve
+Triangle
+Square
+Pentagon
+Hexagon
+Hexagonal
+Heptagon
+Octagon
+Nonagon
+Decagon
+Rectangle
+Rectangular
+Parallelogram
+Rhombus
+Star
+Heart
+Spirangle
+Cube
+Cuboid
+Sphere
+Cone
+Cylinder
+Pyramid
+Torus
+Rectangular Prism
+Star Prism
+Wedge
+Zonohedron
+Tetrahedron
+Octahedron
+Dodecahedron
+Icosahedron
+Kepler-Poinsot Polyhedra
+Cuboctahedron
+Rhombicuboctahedron
+Icosidodecahedron
+Rhombicosidodecahedron
+Trapezohedron
+Cupola
+Anticupola
+Hypercupolae
+Bicupola
+Frustum
+Bifrustum
+Rotunda
+Birotunda
+Prismatoid
+Scutoid
+Bipyramid
+Star Bipyramid
+Antiprism
+Anti-Prism
+Trapezohedra
+Star Trapezohedron
+Spherical polyhedron
+Mobius strip
+Hexaflexagon
+Miura fold
+Hypercube
+Hyperprism
+Hyperpyramid
+Hypertorus
+Hypersphere
+Hypercone
+Hypercylinder
+Hyperzonohedron
+Hypertetrahedron
+Hyperoctahedron
+Hyperdodecahedron
+Hypericosahedron
+Flexible Polyhedron
+Klein bottle
+Monogon
+Digon
+Geometric
+Non-Euclidian
+Poly
+Polygon
+Polygonal
+Polyhedron
+Polyhedral
+Platonic Solids
+Archimedean Solids
+Catalan solids
+Vertex
+Edge
+Surface
+Interior
+Exterior
+Convex
+Concave
+Equiangular
+Equilateral
+Cyclic
+Tangential
+Rectilinear
+Traverse
+Quasi-Regular
+Uniform
+Isogonal
+Isotoxal
+Isohedral
+Stellation
+Ehrhart Polynomial
+Ideal polyhedron
+Polytope

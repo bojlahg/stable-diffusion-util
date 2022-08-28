@@ -1,0 +1,111 @@
+Bokeh
+Cinematic
+Color Grading
+Footage
+Dashcam-Footage
+Dramatic
+Editorial Photography
+Filmic
+Film Grain
+Glamor Shot
+Golden Hour
+Speed Photograph
+High-Speed Photograph
+Intentional camera movement
+Paparazzi Photography
+Photography
+Photoshoot
+Photojournalism
+Portrait
+Lapse
+Time-Lapse
+Satellite Imagery
+War Photography
+Wildlife Photography
+Schlieren
+Night Vision
+Hyperspectral Imaging
+Multispectral Imaging
+Camcorder Effect
+DSLR
+Polaroid
+5mm
+35mm
+Tri-X 400 TX
+Instax
+Ektachrome
+Fujifilm Superia
+Ilford HP5
+Kodak Ektar
+Kodak Gold 200
+Kodak Portra
+Lomo
+Nikon D750
+Provia
+Shot on 70mm
+Velvia
+Vintage
+Pinhole Photography
+Photogram
+Daguerrotype
+Ambrotype
+Calotype
+Tintype
+Macro
+Macro View
+Telephoto
+Magnification
+Microscopic
+Electron Microscope
+Resolution Microscopy
+Super-Resolution Microscopy
+Wide Angle
+Ultra-Wide Angle
+Panorama
+360 Panorama
+360 Angle
+Miniature Faking
+Brenizer Method
+Fisheye Lens
+Fisheye Lens Effect
+Aerial View
+Top-View
+Side-View
+Satellite-View
+Product-View
+Closeup
+Closeup-View
+First-Person
+First-Person view
+Third-Person
+Third-Person View
+Perspective
+Panini Projection
+Orthographic
+Isometric
+Depth of Field
+DOF
+Field of View
+Zoom
+Dolly Zoom
+Blurry
+Blur Effect
+Tilt Blur
+Lens Distortion
+Exposure
+Short Exposure
+Long Exposure
+Double-Exposure
+Shutter Speed 1/1000
+Shutter Speed 1/2
+F/2.8
+F/22
+Gamma
+White Balance
+Lens Flare
+Vignette
+Split Toning
+Rephotography
+Scanography
+Scan Photography
+Slit-Scan Photography
