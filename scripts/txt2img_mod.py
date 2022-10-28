@@ -237,8 +237,8 @@ def main():
         with precision_scope(True):
             with model.ema_scope():
                 for style in styles:
-                    all_samples = list()
                     for prompts in tqdm(data, desc="data"):
+                        all_samples = list()
                         for n in trange(opt.n_iter, desc="Sampling"):
                             if opt.constseed:
                                 seed_everything(opt.seed + n)
