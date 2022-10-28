@@ -151,7 +151,7 @@ def main():
         help="unconditional guidance scale: eps = eps(x, empty) + scale * (eps(x, cond) - eps(x, empty))",
     )
     parser.add_argument(
-        "--from-file",
+        "--from_file",
         type=str,
         help="if specified, load prompts from this file",
     )
@@ -238,12 +238,13 @@ def main():
             with model.ema_scope():
                 for style in styles:
                     all_samples = list()
-                    for n in trange(opt.n_iter, desc="Sampling"):
-                        if opt.constseed:
-                            seed_everything(opt.seed + n)
-                            start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
+                    for prompts in tqdm(data, desc="data"):
+                        for n in trange(opt.n_iter, desc="Sampling"):
+                            if opt.constseed:
+                                seed_everything(opt.seed + n)
+                                start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
                         
-                        for prompts in tqdm(data, desc="data"):
+                        
                             uc = None
                             if opt.scale != 1.0:
                                 uc = model.get_learned_conditioning(batch_size * [""])
@@ -287,18 +288,18 @@ def main():
                             if not opt.skip_grid:
                                 all_samples.append(x_samples_ddim)
                     
-                    if not opt.skip_grid:
-                        # additionally, save as grid
-                        grid = torch.stack(all_samples, 0)
-                        grid = rearrange(grid, 'n b c h w -> (n b) c h w')
-                        grid = make_grid(grid, nrow=n_rows)
+                        if not opt.skip_grid:
+                            # additionally, save as grid
+                            grid = torch.stack(all_samples, 0)
+                            grid = rearrange(grid, 'n b c h w -> (n b) c h w')
+                            grid = make_grid(grid, nrow=n_rows)
 
-                        curdatetime = datetime.now()
-                        gridname = f"{fullpromptclean}_{curdatetime.year:04}{curdatetime.month:02}{curdatetime.day:02}_{curdatetime.hour:02}{curdatetime.minute:02}{curdatetime.second:02}"
+                            curdatetime = datetime.now()
+                            gridname = f"{fullpromptclean}_{curdatetime.year:04}{curdatetime.month:02}{curdatetime.day:02}_{curdatetime.hour:02}{curdatetime.minute:02}{curdatetime.second:02}"
 
-                        # to image
-                        grid = 255. * rearrange(grid, 'c h w -> h w c').cpu().numpy()
-                        Image.fromarray(grid.astype(np.uint8)).save(os.path.join(outpath, f'{gridname}.png'))
+                            # to image
+                            grid = 255. * rearrange(grid, 'c h w -> h w c').cpu().numpy()
+                            Image.fromarray(grid.astype(np.uint8)).save(os.path.join(outpath, f'{gridname}.png'))
 
     print(f"Your samples are ready and waiting for you here: \n{outpath} \n"
           f" \nEnjoy.")
