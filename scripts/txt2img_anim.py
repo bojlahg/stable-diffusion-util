@@ -50,7 +50,7 @@ def slerp(val, low, high):
     return res
     
 def main():
-    opt_ddim_steps = 5
+    opt_ddim_steps = 20
     opt_ddim_eta = 0.0
     opt_plms = False
     opt_fixed_code = True
@@ -61,17 +61,18 @@ def main():
     opt_n_samples = 1
     opt_n_iter = 1
     opt_n_rows = 1
-    opt_scale = 7.5
+    opt_scale_from = -100
+    opt_scale_to = 100
     opt_config = "configs/stable-diffusion/v1-inference.yaml"
     opt_precision = "autocast"
     opt_ckpt = "models/ldm/sd/sd-v1-4.ckpt"
-    opt_seed_start = int(datetime.now().timestamp())
+    opt_seed_start = 0
     opt_seed_end = opt_seed_start + 1
     opt_from_file = None
     opt_prompt = "Retrofuturism, oil on canvas"
     opt_outdir = f"outputs/anim"
     opt_start_frame = 0
-    opt_frames = 300
+    opt_framecount = 2000
     opt_verbose = False
 
     config = OmegaConf.load(f"{opt_config}")
@@ -91,7 +92,7 @@ def main():
     batch_size = opt_n_samples
     n_rows = opt_n_rows if opt_n_rows > 0 else batch_size
 
-    sample_path = os.path.join(outpath, f"{opt_prompt} ({opt_seed_start}-{opt_seed_end})")
+    sample_path = os.path.join(outpath, f"{opt_prompt}_{opt_seed_start}_{opt_scale_from}-{opt_scale_to}")
     os.makedirs(sample_path, exist_ok=True)
     grid_count = len(os.listdir(outpath)) - 1
 
@@ -113,19 +114,19 @@ def main():
                 prompt = opt_prompt
 
                 for n in trange(opt_n_iter, desc="Sampling"):
-                
                     uc = None
-                    if opt_scale != 1.0:
-                        uc = model.get_learned_conditioning(batch_size * [""])
                     if isinstance(prompt, tuple):
                         prompt = list(prompt)
                     c = model.get_learned_conditioning(prompt)
                     shape = [opt_c, opt_height // opt_f, opt_width // opt_f]
                     
-                    for frame in range(opt_start_frame, opt_frames):
-                        print(f"frame = {frame}\n")
+                    for frame in range(opt_start_frame, opt_framecount):
+                        opt_scale = opt_scale_from + (opt_scale_to - opt_scale_from) * (frame / opt_framecount)
+                        print(f"frame = {frame} {opt_scale}\n")
+                        #frame_code = slerp(frame / opt_framecount, start_code, end_code)
                         
-                        frame_code = slerp(frame / opt_frames, start_code, end_code)
+                        #if opt_scale != 1.0:
+                        uc = model.get_learned_conditioning(batch_size * [""])
                         
                         samples_ddim, _ = sampler.sample(S=opt_ddim_steps,
                                                          conditioning=c,
@@ -135,7 +136,7 @@ def main():
                                                          unconditional_guidance_scale=opt_scale,
                                                          unconditional_conditioning=uc,
                                                          eta=opt_ddim_eta,
-                                                         x_T=frame_code)
+                                                         x_T=start_code)
                         
                         x_samples_ddim = model.decode_first_stage(samples_ddim)
                         x_samples_ddim = torch.clamp((x_samples_ddim + 1.0) / 2.0, min=0.0, max=1.0)

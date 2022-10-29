@@ -54,6 +54,18 @@ def main():
         help="the prompt to render"
     )
     parser.add_argument(
+        "--style",
+        type=str,
+        nargs="?",
+        default="",
+        help="the style to render"
+    )
+    parser.add_argument(
+        "--dirnamehash",
+        action='store_true',
+        help="use hash as dir name"
+    )
+    parser.add_argument(
         "--outdir",
         type=str,
         nargs="?",
@@ -244,7 +256,6 @@ def main():
                                 seed_everything(opt.seed + n)
                                 start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
                         
-                        
                             uc = None
                             if opt.scale != 1.0:
                                 uc = model.get_learned_conditioning(batch_size * [""])
@@ -255,8 +266,11 @@ def main():
                                 fullprompt = f"{prompts[0]}, {style}"
                             else:
                                 fullprompt = prompts[0]
-                                
-                            fullpromptclean = fullprompt.replace('/', '').replace('\\', '')
+                            
+                            if opt.dirnamehash:
+                                fullpromptclean = f"{hash(fullprompt)}"
+                            else:
+                                fullpromptclean = fullprompt.replace('/', '').replace('\\', '')
                             
                             print(fullprompt)
                             sample_path = os.path.join(outpath, fullpromptclean)
@@ -265,7 +279,11 @@ def main():
                             curdatetime = datetime.now()
                             filename = f"{curdatetime.year:04}{curdatetime.month:02}{curdatetime.day:02}_{curdatetime.hour:02}{curdatetime.minute:02}{curdatetime.second:02}"
                             
-                            c = model.get_learned_conditioning(fullprompt)
+                            fullprompt2 = fullprompt
+                            if opt.style:
+                                fullprompt2 = f"{fullprompt}, {opt.style}"
+                            
+                            c = model.get_learned_conditioning(fullprompt2)
                             shape = [opt.C, opt.H // opt.f, opt.W // opt.f]
                             samples_ddim, _ = sampler.sample(S=opt.ddim_steps,
                                                              conditioning=c,
