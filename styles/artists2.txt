@@ -120,7 +120,7 @@ by Alexandre Benois
 by Alexandre Cabanel
 by Alexandre Calame
 by Alexandre Jacovleff
-by Alexandre-E?variste Fragonard
+by Alexandre-Evariste Fragonard
 by Alexei Harlamoff
 by Alexej von Jawlensky
 by Alexis Gritchenko
@@ -197,7 +197,7 @@ by Andrew Robinson
 by Andrew Whem
 by Andrew Wyeth
 by Andrey Remnev
-by Andre?i Arinouchkine
+by Andrei Arinouchkine
 by Android Jones
 by Andrzej Sykut
 by Andre Lhote
@@ -268,7 +268,6 @@ by Aristarkh Lentulov
 by Arkhyp Kuindzhi
 by Armand Guillaumin
 by Armand Point
-by Arnold Bocklin
 by Arnold Bocklin
 by Aron Demetz
 by Aron Wiesenfeld
@@ -1484,7 +1483,7 @@ by Ryan Stegman
 by Ryohei Hase
 by Sacha Goldberger
 by Sailor Moon
-by Sakai Ho?itsu
+by Sakai Hoitsu
 by Sally Mann
 by Salvador Dali
 by Sam Bosma
@@ -1577,7 +1576,7 @@ by Takeshi Obata
 by Tamara Lempicka
 by Tan Zhi Hui
 by Tara McPherson
-by Tari Ma?rk Da?vid
+by Tari Mark David
 by teamLab
 by Ted Nasmith
 by Ted Wallace
